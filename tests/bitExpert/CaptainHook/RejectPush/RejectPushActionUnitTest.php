@@ -9,13 +9,16 @@
  * file that was distributed with this source code.
  */
 
-use bitExpert\CaptainHook\RejectPush\RejectPushAction;
+namespace bitExpert\CaptainHook\RejectPush;
+
 use CaptainHook\App\Config;
 use CaptainHook\App\Config\Action;
 use CaptainHook\App\Config\Options;
 use CaptainHook\App\Console\IO;
+use DateTimeImmutable;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 use SebastianFeldmann\Git\Log\Commit;
 use SebastianFeldmann\Git\Repository;
 
@@ -155,7 +158,7 @@ class RejectPushActionUnitTest extends TestCase
      */
     public function denyPushWhenConfiguredCommitIdsAreFoundInCommitHistory()
     {
-        self::expectException(\RuntimeException::class);
+        self::expectException(RuntimeException::class);
 
         $this->io->expects(self::once())
             ->method('getArguments')
@@ -177,7 +180,7 @@ class RejectPushActionUnitTest extends TestCase
      */
     public function denyPushWhenConfiguredCommitIdIsFoundInCommitHistory()
     {
-        self::expectException(\RuntimeException::class);
+        self::expectException(RuntimeException::class);
 
         $this->io->expects(self::once())
             ->method('getArguments')

@@ -55,11 +55,11 @@ class RejectPushAction implements Action
 
         $options = $action->getOptions()->getAll();
         $notAllowedCommits = $options[$target] ?? [];
-        if(!is_array($notAllowedCommits)) {
+        if (!is_array($notAllowedCommits)) {
             $notAllowedCommits = [$notAllowedCommits];
         }
 
-        if(count($notAllowedCommits) === 0) {
+        if (count($notAllowedCommits) === 0) {
             // no need to iterate over the whole Git history when no configuration for the $target
             // was found
             return;

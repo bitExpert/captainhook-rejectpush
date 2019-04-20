@@ -19,7 +19,8 @@
         "phpunit/phpunit": "^8.0",
         "squizlabs/php_codesniffer": "^2.9.0",
         "bitexpert/phing-securitychecker": "^0.4.0",
-        "phing/phing": "^2.16.0"
+        "phing/phing": "^2.16.0",
+        "phpstan/phpstan": "^0.11.5"
     },
     "autoload" : {
         "psr-4" : {

@@ -22,7 +22,9 @@ jobs:
       script:
         - composer validate
         - ./vendor/bin/phing security:check
+        - ./vendor/bin/phing lint
         - ./vendor/bin/phing sniff
+        - ./vendor/bin/phing analyze
     - stage: coverage
       if: branch=master AND type=push
       php: 7.2

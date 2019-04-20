@@ -1,15 +1,41 @@
 {
     "commit-msg": {
         "enabled": true,
-        "actions": []
+        "actions": [
+            {
+                "action": "\\CaptainHook\\App\\Hook\\Message\\Action\\Beams",
+                "options": {
+                    "subjectLength": 50,
+                    "bodyLineLength": 72
+                }
+            }
+        ]
     },
     "pre-push": {
         "enabled": false,
-        "actions": []
+        "actions": [
+            {
+                "action": "./vendor/bin/phing security:check",
+                "options": []
+            }
+        ]
     },
     "pre-commit": {
         "enabled": true,
-        "actions": []
+        "actions": [
+            {
+                "action": "./vendor/bin/phing lint",
+                "options": []
+            },
+            {
+                "action": "./vendor/bin/phing sniff",
+                "options": []
+            },
+            {
+                "action": "./vendor/bin/phing unit",
+                "options": []
+            }
+        ]
     },
     "prepare-commit-msg": {
         "enabled": false,

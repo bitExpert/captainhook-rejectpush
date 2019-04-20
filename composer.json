@@ -23,12 +23,12 @@
     },
     "autoload" : {
         "psr-4" : {
-            "bitExpert\\CaptainHook\\" : "src/bitExpert/CaptainHook"
+            "bitExpert\\CaptainHook\\RejectPush\\" : "src/bitExpert/CaptainHook/RejectPush"
         }
     },
     "autoload-dev" : {
         "psr-4" : {
-            "bitExpert\\CaptainHook\\" : "tests/bitExpert/CaptainHook"
+            "bitExpert\\CaptainHook\\RejectPush\\" : "tests/bitExpert/CaptainHook/RejectPush"
         }
     },
     "scripts": {

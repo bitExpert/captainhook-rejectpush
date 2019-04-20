@@ -21,7 +21,7 @@ Add the following code to your `captainhook.json` configuration file:
 
 ```
 {
-  "pre-commit": {
+  "pre-push": {
     "enabled": true,
     "actions": [
       {
@@ -40,7 +40,7 @@ Add the following code to your `captainhook.json` configuration file:
 }
 ```
 
-[Captain Hook](https://github.com/CaptainHookPhp/captainhook) will not check
+[Captain Hook](https://github.com/CaptainHookPhp/captainhook) will now check
 on every push if one of the defined commit Ids is part of the push. If so, it
 will cancel the push.
 

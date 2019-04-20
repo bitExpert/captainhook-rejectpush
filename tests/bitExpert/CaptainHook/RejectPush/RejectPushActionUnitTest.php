@@ -18,6 +18,7 @@ use CaptainHook\App\Console\IO;
 use DateTimeImmutable;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use ReflectionException;
 use RuntimeException;
 use SebastianFeldmann\Git\Log\Commit;
 use SebastianFeldmann\Git\Repository;
@@ -200,7 +201,7 @@ class RejectPushActionUnitTest extends TestCase
     /**
      * Helper method to return a default Git Commit History collection
      *
-     * @throws Exception
+     * @throws \Exception
      */
     private function createCommitHistory(): iterable
     {

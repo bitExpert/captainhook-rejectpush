@@ -3,7 +3,7 @@
 This package provides an action for [Captain Hook](https://github.com/CaptainHookPhp/captainhook) 
 which will reject a push to a remote when configured commit Ids are found in the Git history.
 
-[![Build Status](https://travis-ci.org/bitExpert/captainhook-rejectpush.svg?branch=master)](https://travis-ci.org/bitExpert/captainhook-rejectpush)
+[![Build Status](https://github.com/bitExpert/captainhook-rejectpush/workflows/ci/badge.svg?branch=master)](https://github.com/bitExpert/captainhook-rejectpush/actions)
 [![Coverage Status](https://coveralls.io/repos/github/bitExpert/captainhook-rejectpush/badge.svg?branch=master)](https://coveralls.io/github/bitExpert/captainhook-rejectpush?branch=master)
 
 ## Installation

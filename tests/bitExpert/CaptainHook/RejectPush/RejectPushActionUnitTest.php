@@ -206,10 +206,10 @@ class RejectPushActionUnitTest extends TestCase
     private function createCommitHistory(): iterable
     {
         return [
-            new Commit('1234567', [], '', new DateTimeImmutable(), 'Author'),
-            new Commit('2345678', [], '', new DateTimeImmutable(), 'Author'),
-            new Commit('3456789', [], '', new DateTimeImmutable(), 'Author'),
-            new Commit('4567890', [], '', new DateTimeImmutable(), 'Author'),
+            new Commit('1234567', [], '', '', new DateTimeImmutable(), 'Author'),
+            new Commit('2345678', [], '', '', new DateTimeImmutable(), 'Author'),
+            new Commit('3456789', [], '', '', new DateTimeImmutable(), 'Author'),
+            new Commit('4567890', [], '', '', new DateTimeImmutable(), 'Author'),
 
         ];
     }

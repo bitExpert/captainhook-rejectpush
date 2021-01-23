@@ -66,7 +66,6 @@ class RejectPushAction implements Action
         }
 
         foreach ($this->getAllCommits($repository) as $commit) {
-            /** @var \SebastianFeldmann\Git\Log\Commit $commit */
             if (in_array($commit->getHash(), $notAllowedCommits, true)) {
                 throw new \RuntimeException(
                     sprintf(
@@ -83,7 +82,7 @@ class RejectPushAction implements Action
      * Returns a list of all commits of the current branch.
      *
      * @param Repository $repository
-     * @return iterable
+     * @return iterable<\SebastianFeldmann\Git\Log\Commit>
      */
     protected function getAllCommits(Repository $repository): iterable
     {

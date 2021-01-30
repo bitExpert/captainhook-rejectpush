@@ -60,8 +60,7 @@ class RejectPushAction implements Action
         }
 
         if (count($notAllowedCommits) === 0) {
-            // no need to iterate over the whole Git history when no configuration for the $target
-            // was found
+            // no need to iterate over the whole Git history when no configuration for the $target was found
             return;
         }
 

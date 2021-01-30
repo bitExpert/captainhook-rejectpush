@@ -40,10 +40,10 @@ jobs:
       - name: Install lowest CaptainHookPHP version
         if: matrix.composer-prefer-lowest == true
         run: |
-          composer remove --dev captainhook/plugin-composer
+          composer remove --dev captainhook/plugin-composer bitexpert/captainhook-infection
           composer remove captainhook/captainhook
           composer require --prefer-lowest captainhook/captainhook
-          composer require --prefer-lowest --dev captainhook/plugin-composer
+          composer require --prefer-lowest --dev captainhook/plugin-composer bitexpert/captainhook-infection
 
       - name: Codesniffer
         run: composer cs-check

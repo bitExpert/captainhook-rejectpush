@@ -60,7 +60,8 @@ jobs:
           INFECTION_BADGE_API_KEY: ${{ secrets.INFECTION_BADGE_API_KEY }}
         run: |
           git fetch --depth=1 origin $GITHUB_BASE_REF
-          composer infection --git-diff-filter=A --git-diff-base=origin/$GITHUB_BASE_REF --logger-github
+          ./vendor/bin/infection -j4 --git-diff-filter=A --git-diff-base=origin/$GITHUB_BASE_REF --logger-github --ignore-msi-with-no-mutations --only-covered
+
 
       - name: Unittests with coverage
         if: matrix.coveralls == true

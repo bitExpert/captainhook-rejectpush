@@ -33,7 +33,7 @@ To run tests:
 
 ```console
 $ git clone git@github.com:bitExpert/captainhook-rejectpush.git
-$ cd disco
+$ cd captainhook-rejectpush
 ```
 
 2. Install dependencies via composer:

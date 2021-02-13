@@ -26,23 +26,23 @@ use SebastianFeldmann\Git\Repository;
 class RejectPushActionUnitTest extends TestCase
 {
     /**
-     * @var Config|MockObject
+     * @var MockObject&Config
      */
     private $config;
     /**
-     * @var IO|MockObject
+     * @var MockObject&IO
      */
     private $io;
     /**
-     * @var Repository|MockObject
+     * @var MockObject&Repository
      */
     private $repository;
     /**
-     * @var Action|MockObject
+     * @var MockObject&Action
      */
     private $action;
     /**
-     * @var RejectPushAction
+     * @var MockObject&RejectPushAction
      */
     private $hook;
 
@@ -64,7 +64,7 @@ class RejectPushActionUnitTest extends TestCase
     /**
      * @test
      */
-    public function missingTargetIOParameterStopsExecution()
+    public function missingTargetIOParameterStopsExecution(): void
     {
         $this->io->expects(self::once())
             ->method('getArguments')
@@ -79,7 +79,7 @@ class RejectPushActionUnitTest extends TestCase
     /**
      * @test
      */
-    public function missingConfigurationForTargetStopsExecution()
+    public function missingConfigurationForTargetStopsExecution(): void
     {
         $this->io->expects(self::once())
             ->method('getArguments')
@@ -98,7 +98,7 @@ class RejectPushActionUnitTest extends TestCase
     /**
      * @test
      */
-    public function emptyConfigurationArrayForTargetStopsExecution()
+    public function emptyConfigurationArrayForTargetStopsExecution(): void
     {
         $this->io->expects(self::once())
             ->method('getArguments')
@@ -117,7 +117,7 @@ class RejectPushActionUnitTest extends TestCase
     /**
      * @test
      */
-    public function allowPushWhenConfiguredCommitIdsCannotBeFoundInCommitHistory()
+    public function allowPushWhenConfiguredCommitIdsCannotBeFoundInCommitHistory(): void
     {
         $this->io->expects(self::once())
             ->method('getArguments')
@@ -137,7 +137,7 @@ class RejectPushActionUnitTest extends TestCase
     /**
      * @test
      */
-    public function allowPushWhenConfiguredCommitIdCannotBeFoundInCommitHistory()
+    public function allowPushWhenConfiguredCommitIdCannotBeFoundInCommitHistory(): void
     {
         $this->io->expects(self::once())
             ->method('getArguments')
@@ -157,9 +157,9 @@ class RejectPushActionUnitTest extends TestCase
     /**
      * @test
      */
-    public function denyPushWhenConfiguredCommitIdsAreFoundInCommitHistory()
+    public function denyPushWhenConfiguredCommitIdsAreFoundInCommitHistory(): void
     {
-        self::expectException(RuntimeException::class);
+        $this->expectException(RuntimeException::class);
 
         $this->io->expects(self::once())
             ->method('getArguments')
@@ -179,9 +179,9 @@ class RejectPushActionUnitTest extends TestCase
     /**
      * @test
      */
-    public function denyPushWhenConfiguredCommitIdIsFoundInCommitHistory()
+    public function denyPushWhenConfiguredCommitIdIsFoundInCommitHistory(): void
     {
-        self::expectException(RuntimeException::class);
+        $this->expectException(RuntimeException::class);
 
         $this->io->expects(self::once())
             ->method('getArguments')
@@ -202,6 +202,7 @@ class RejectPushActionUnitTest extends TestCase
      * Helper method to return a default Git Commit History collection
      *
      * @throws \Exception
+     * @return iterable<Commit>
      */
     private function createCommitHistory(): iterable
     {

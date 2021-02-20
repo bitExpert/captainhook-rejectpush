@@ -16,7 +16,7 @@
     },
     "require-dev": {
         "captainhook/plugin-composer": "^5.2",
-        "bitexpert/captainhook-infection": "^0.1.0",
+        "bitexpert/captainhook-infection": "^0.3.0",
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "^3.5",
         "phpstan/phpstan": "^0.12",
@@ -46,5 +46,8 @@
         "test": "vendor/bin/phpunit",
         "infection": "vendor/bin/infection -j4 --ignore-msi-with-no-mutations --only-covered",
         "coverage": "vendor/bin/phpunit --coverage-clover clover.xml"
+    },
+    "config": {
+        "sort-packages": true
     }
 }

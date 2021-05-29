@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 0.5.0
+
+### Added
+
+- [#48](https://github.com/bitexpert/captainhook-rejectpush/pull/48) Add license checker to CI workflow
+- [#47](https://github.com/bitexpert/captainhook-rejectpush/pull/47) Upgrade Composer dependencies
+- [#46](https://github.com/bitexpert/captainhook-rejectpush/pull/46) Bump captainhook/plugin-composer to 5.3.1
+- [#45](https://github.com/bitexpert/captainhook-rejectpush/pull/45) Bump captainhook/captainhook to 5.10.1
+- [#44](https://github.com/bitexpert/captainhook-rejectpush/pull/44) Bump phpstan/phpstan to 0.12.88
+- [#38](https://github.com/bitexpert/captainhook-rejectpush/pull/38) Upgrade to GitHub-native Dependabot
+- [#30](https://github.com/bitexpert/captainhook-rejectpush/pull/30) Bump squizlabs/php_codesniffer to 3.6.0
+- [#28](https://github.com/bitexpert/captainhook-rejectpush/pull/28) Bump infection/infection to 0.21.5
+- [#25](https://github.com/bitexpert/captainhook-rejectpush/pull/25) Bump phpunit/phpunit to 9.5.4
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## 0.4.0
 
 ### Added

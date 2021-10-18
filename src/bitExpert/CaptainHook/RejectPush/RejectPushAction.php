@@ -49,7 +49,7 @@ class RejectPushAction implements Action
     {
         $arguments = $io->getArguments();
         $target = $arguments['target'] ?? '';
-        if (empty($target)) {
+        if ($target === '') {
             return;
         }
 

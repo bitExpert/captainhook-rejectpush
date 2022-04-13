@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 0.6.0
+
+### Added
+
+- [#51](https://github.com/bitexpert/captainhook-rejectpush/pull/51) Allow the plugin to run with PHP 8.1
+- [#50](https://github.com/bitexpert/captainhook-rejectpush/pull/50) Upgrade Composer dependencies
+- [#49](https://github.com/bitexpert/captainhook-rejectpush/pull/49) Add PHPStan PHPUnit extension
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## 0.5.0
 
 ### Added

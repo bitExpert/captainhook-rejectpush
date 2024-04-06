@@ -5,7 +5,7 @@ which will reject a push to a remote when configured commit Ids are found in the
 
 [![Build Status](https://github.com/bitExpert/captainhook-rejectpush/workflows/ci/badge.svg?branch=master)](https://github.com/bitExpert/captainhook-rejectpush/actions)
 [![Coverage Status](https://coveralls.io/repos/github/bitExpert/captainhook-rejectpush/badge.svg?branch=master)](https://coveralls.io/github/bitExpert/captainhook-rejectpush?branch=master)
-[![Infection MSI](https://badge.stryker-mutator.io/github.com/bitExpert/captainhook-rejectpush/master)](https://infection.github.io)
+![Mastodon Follow](https://img.shields.io/mastodon/follow/109408681246972700?domain=https://rheinneckar.social)
 
 ## Installation
 
